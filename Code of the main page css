@@ -1,0 +1,92 @@
+.height{
+	height: 80px;
+}
+.height1{
+	height: 50px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 5% auto 5%;
+}
+.grid-container1 {
+  display: grid;
+  grid-template-columns: 5% auto auto auto auto 5%;
+}
+.grid-container2 {
+  display: grid;
+  grid-template-columns: 5% 15% auto auto auto 5%;
+}
+.grid-container3{
+	display: grid;
+	grid-template-columns: auto auto;
+}
+.textcolor{
+	color: white;
+	font-weight: bold;
+}
+.bimage{
+	background-image: url('100m14000000wftb930FD.jpg');
+    background-repeat: no-repeat;  
+    background-size: cover;
+}
+.textsize{
+	font-size: 30px;
+}
+.imagesize{
+	width: 200px; 
+	height: 250px; 
+	margin-left: 65px;
+}
+.imagesizel{
+	width: 200px; 
+	height: 250px; 
+	margin-left: 80px;
+}
+.imagesizer{
+	width: 200px; 
+	height: 250px; 
+	margin-left: 55px;
+}
+.imageofnewsl{
+	width: 350px;
+	height: 400px;
+}
+.imageofnewsr{
+	height: 100px;
+}
+.imageofnews{
+	width: 300px;
+	height: 350px;
+	margin-left: 10px;
+}
+.textofnews{
+	overflow:hidden; 
+	word-wrap:break-word;
+	max-height: 100px;
+	min-height: 100px;
+}
+.totop{
+	margin-top: -66px;
+	text-align: right;
+}
+.totop1{
+	margin-top: -10px;
+}
+.point{
+	cursor: pointer;
+	text-decoration: none;
+}
+.point:hover{
+	color: #cc1818;
+}
+
+
+
+
+
+
+
+
+
+
+
