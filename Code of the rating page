@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+    <meta http-equiv="pragma" content="no-cache" /> 
+    <meta http-equiv="content-style-type" content="text/css" /> 
+    <meta http-equiv="content-script-type" content="text/javascript" /> 
+    <meta name="keywords" content="Mercedes" /> 
+    <meta property="og:image" content="/mercedes_logo-removebg-preview.png"/>
+    <meta property="og:image:secure_url" content="mercedes_logo-removebg-preview.png" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+	<title>
+    	Cinemastar
+    </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="cl.css">
+<style type="text/css">
+  /**{
+    border:1px solid red;
+  }*/
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body style="background-color: black">
+  <div class="grid-container">
+  <div class="textcolor"></div>
+  <div class="point"><a href="Main page cl.html"><img style="width: 90px" src="Logo.jpg"></a>
+<span class="m-lg-4 textcolor point">О нас</span>
+<span class="m-lg-4 textcolor point"><a class="point2" href="Schedule page.html">Расписание</a></span>
+<span class="m-lg-4 textcolor point" style="color: #cc1818">Рейтинг</span>
+<span class="m-lg-4 textcolor point">Премьеры</span>
+<span class="m-lg-4 textcolor point mr-lg-5">Мой аккаунт</span>
+<span class="ml-lg-5 textcolor point mr-lg-5" style="visibility: hidden;">Мой zdjsfbамчdfdsfsdfsdfsdfdfsfsdffsdfsdfsdfsdfsdfsdfккаsadт</span>
+
+
+<select onchange="window.location.href=this.options[this.selectedIndex].value" class="rounded" style="color: black">
+  <option value="Main page cl.html">Русский</option>
+  <option value="Page 2.html">English</option>
+</select>
+  </div>
+  <div class="textcolor"></div>
+  </div>
+  <br>
+  <div>
+    <p style="color: white" class="font">Рейтинги фильмов</p>
+  </div>
+  <br>
+
+<div class="grid-container4">
+<div></div>
+<div id="light">
+  <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+  <video id="VisaChipCardVideo" width="720" controls>
+      <source src="Star Wars_ The Bad Batch _ Official Trailer _ Disney+.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div id="fade" onClick="lightbox_close();"></div> 
+
+<div class="point2">
+  <a onclick="lightbox_open();"><img class="videosize" src="Star_Wars_The_Clone_Wars_Season_7_poster_2.jpg"></a>
+  <p></p>
+  <p class="widthlim pr-lg-3">Clone wars</p>
+  <p class="text-warning text-center mr-lg-3">10/10⭐</p>
+</div>
+  
+
+
+
+
+<div id="light1">
+  <a class="boxclose" id="boxclose" onclick="lightbox_close1();"></a>
+  <video id="VisaChipCardVideo1" width="720" controls>
+      <source src="Star Wars_ The Bad Batch _ Official Trailer _ Disney+.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div id="fade1" onClick="lightbox_close1();"></div>
+
+<div class="point2">
+  <a onclick="lightbox_open1();"><img class="videosize" src="Star_Wars_The_Clone_Wars_Season_7_poster_2.jpg"></a>
+  <p></p>
+  <p class="widthlim">Clone wars</p>
+  <p class="text-warning text-center mr-lg-3">10/10⭐</p>
+</div>
+
+
+
+
+
+
+<div id="light2">
+  <a class="boxclose" id="boxclose" onclick="lightbox_close2();"></a>
+  <video id="VisaChipCardVideo2" width="720" controls>
+      <source src="Clone Wars_ Battle of the Heroes _ MAY 4th TRAILER! (Anakin vs. Obi-wan fan animation).mp4" type="video/mp4">
+    </video>
+</div>
+
+<div id="fade2" onClick="lightbox_close2();"></div>
+
+<div class="point2">
+  <a onclick="lightbox_open2();"><img class="videosize" src="BadBatchPoster.jpg"></a>
+  <p></p>
+  <p class="widthlim"> asdffsdfffffffffffffffffffffffffffffffffffffffffffffffffffffffff</p>
+  <p class="text-warning text-center mr-lg-3">10/10⭐</p>
+</div>
+
+
+
+
+
+
+
+
+<div id="light3">
+  <a class="boxclose" id="boxclose" onclick="lightbox_close3();"></a>
+  <video id="VisaChipCardVideo3" width="720" controls>
+      <source src="Побег из Шоушенка (1994) — русский трейлер.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div id="fade3" onClick="lightbox_close3();"></div>
+
+<div class="point2">
+  <a onclick="lightbox_open3();"><img class="videosize" src="v6113f7f005baab50d60m.jpeg"></a>
+  <p></p>
+  <p class="widthlim">Bad batchjsdkbfjsdfbsdjflbsdjkfbdjsfbjsdkbndjssdfsfsdnbfsj</p>
+  <p class="text-warning text-center mr-lg-3">10/10⭐</p>
+</div>
+<div></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-container4">
+<div></div>
+<div id="light4">
+  <a class="boxclose" id="boxclose" onclick="lightbox_close4();"></a>
+  <video id="VisaChipCardVideo4" width="720" controls>
+      <source src="Star Wars_ The Bad Batch _ Official Trailer _ Disney+.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div id="fade4" onClick="lightbox_close4();"></div> 
+
+<div class="point2">
+  <a onclick="lightbox_open4();"><img class="videosize" src="BadBatchPoster.jpg"></a>
+  <p></p>
+  <p class="widthlim">Bad batch</p>
+  <p class="text-warning text-center mr-lg-3">10/10⭐</p>
+</div>
+  
+
+
+
+
+<div id="light5">
+  <a class="boxclose" id="boxclose" onclick="lightbox_close5();"></a>
+  <video id="VisaChipCardVideo5" width="720" controls>
+      <source src="Star Wars_ The Bad Batch _ Official Trailer _ Disney+.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div id="fade5" onClick="lightbox_close5();"></div>
+
+<div class="point2">
+  <a onclick="lightbox_open5();"><img class="videosize" src="Star_Wars_The_Clone_Wars_Season_7_poster_2.jpg"></a>
+  <p></p>
+  <p class="widthlim">Clone wars</p>
+  <p class="text-warning text-center mr-lg-3">10/10⭐</p>
+</div>
+
+
+
+
+
+
+<div id="light6">
+  <a class="boxclose" id="boxclose" onclick="lightbox_close6();"></a>
+  <video id="VisaChipCardVideo6" width="720" controls>
+      <source src="Мидуэй - Трейлер (HD).mp4" type="video/mp4">
+    </video>
+</div>
+
+<div id="fade6" onClick="lightbox_close6();"></div>
+<div class="point2">
+  <a onclick="lightbox_open6();"><img class="videosize" src="38850137-1129721.jpg"></a>
+  <p></p>
+  <p class="widthlim"> asdffsdfffffffffffffffffffffffffffffffffffffffffffffffffffffffff</p>
+  <p class="text-warning text-center mr-lg-3">10/10⭐</p>
+</div>
+
+
+
+
+
+
+
+
+<div id="light7">
+  <a class="boxclose" id="boxclose" onclick="lightbox_close7();"></a>
+  <video id="VisaChipCardVideo7" width="720" controls>
+      <source src="Веном 2 – официальный трейлер.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div id="fade7" onClick="lightbox_close7();"></div>
+
+<div class="point2">
+  <a onclick="lightbox_open7();"><img class="videosize" src="BadBatchPoster.jpg"></a>
+  <p></p>
+  <p class="widthlim">Bad batchjsdkbfjsdfbsdjflbsdjkfbdjsfbjsdkbndjssdfsfsdnbfsj</p>
+  <p class="text-warning text-center mr-lg-3">10/10⭐</p>
+</div>
+<div></div>
+</div>
+
+
+
+
+
+<br>
+<br>
+<br>
+  <div class="grid-container2">
+  <div class="textcolor height1"></div>
+  <div class="textcolor height1" style="border-top: solid;"><img height="150%" src="Logo.jpg"></div>
+  <div class="textcolor height pt-lg-5" style="border-top: solid;">Расписание</div>
+  <div class="textcolor height pt-lg-5" style="border-top: solid;">О компании</div>
+  <div class="textcolor pt-lg-5" style="border-top: solid;"><span>Технологий</span>
+    <img class="float-right ml-lg-3 point" width="25" src="facebookicon.jpg">
+    <img class="float-right ml-lg-3 point" width="25" src="vkicon.jpg">
+    <img class="float-right point" width="36" src="youtubeicon.jpg"></div>
+  <div class="textcolor"></div>
+  <div class="textcolor height"></div>
+  <div class="textcolor"><div class="pb-lg-2">Скачайте приложение</div>
+    <img class="point" height="30%" src="https://www.kinopark.kz/static/img/icons/appStore.svg">
+    <p></p>
+    <img class="point" height="30%" src="https://www.kinopark.kz/static/img/icons/googlePlay.svg"></div>
+  <div class="textcolor"><p class="point">Сегодня в кино</p>
+    <p class="point">Скоро на экранах</p>
+  <p class="point">Эксклюзив</p></div>
+  <div class="textcolor"><p class="point">О нас</p>
+    <p class="point">Кинотеатры</p>
+  <p class="point">Партнеры</p>
+  <p class="point">Новости</p>
+<p class="point">Контакты</p></div>
+  <div class="textcolor"><div>IMAX</div><div>Laser</div><div>Dolby Atmos</div><div class="totop">+7-707-700-07-70</div>
+    <p class="text-right">info@gmail.com</p>
+    <p class="text-right totop1">Карта сайта</p></div>
+  <div class="textcolor"></div>
+</div>
+<br>
+
+
+
+
+
+
+
+
+<script type="text/javascript">window.document.onkeydown = function(e) {
+  if (!e) {
+    e = event;
+  }
+  if (e.keyCode == 27) {
+    lightbox_close();
+  }
+}
+
+function lightbox_open() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+  window.scrollTo(0, 0);
+  document.getElementById('light').style.display = 'block';
+  document.getElementById('fade').style.display = 'block';
+  lightBoxVideo.play();
+}
+
+function lightbox_close() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+  document.getElementById('light').style.display = 'none';
+  document.getElementById('fade').style.display = 'none';
+  lightBoxVideo.pause();
+}</script>
+
+
+
+
+<script type="text/javascript">window.document.onkeydown = function(e) {
+  if (!e) {
+    e = event;
+  }
+  if (e.keyCode == 27) {
+    lightbox_close();
+  }
+}
+
+function lightbox_open1() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo1");
+  window.scrollTo(0, 0);
+  document.getElementById('light1').style.display = 'block';
+  document.getElementById('fade1').style.display = 'block';
+  lightBoxVideo.play();
+}
+
+function lightbox_close1() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo1");
+  document.getElementById('light1').style.display = 'none';
+  document.getElementById('fade1').style.display = 'none';
+  lightBoxVideo.pause();
+}</script>
+
+
+
+
+
+<script type="text/javascript">window.document.onkeydown = function(e) {
+  if (!e) {
+    e = event;
+  }
+  if (e.keyCode == 27) {
+    lightbox_close();
+  }
+}
+
+function lightbox_open2() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo2");
+  window.scrollTo(0, 0);
+  document.getElementById('light2').style.display = 'block';
+  document.getElementById('fade2').style.display = 'block';
+  lightBoxVideo.play();
+}
+
+function lightbox_close2() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo2");
+  document.getElementById('light2').style.display = 'none';
+  document.getElementById('fade2').style.display = 'none';
+  lightBoxVideo.pause();
+}</script>
+
+
+
+
+
+
+<script type="text/javascript">window.document.onkeydown = function(e) {
+  if (!e) {
+    e = event;
+  }
+  if (e.keyCode == 27) {
+    lightbox_close();
+  }
+}
+
+function lightbox_open3() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo3");
+  window.scrollTo(0, 0);
+  document.getElementById('light3').style.display = 'block';
+  document.getElementById('fade3').style.display = 'block';
+  lightBoxVideo.play();
+}
+
+function lightbox_close3() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo3");
+  document.getElementById('light3').style.display = 'none';
+  document.getElementById('fade3').style.display = 'none';
+  lightBoxVideo.pause();
+}</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">window.document.onkeydown = function(e) {
+  if (!e) {
+    e = event;
+  }
+  if (e.keyCode == 27) {
+    lightbox_close();
+  }
+}
+
+function lightbox_open4() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo4");
+  window.scrollTo(0, 500);
+  document.getElementById('light4').style.display = 'block';
+  document.getElementById('fade4').style.display = 'block';
+  lightBoxVideo.play();
+}
+
+function lightbox_close4() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo4");
+  document.getElementById('light4').style.display = 'none';
+  document.getElementById('fade4').style.display = 'none';
+  lightBoxVideo.pause();
+}</script>
+
+
+
+
+<script type="text/javascript">window.document.onkeydown = function(e) {
+  if (!e) {
+    e = event;
+  }
+  if (e.keyCode == 27) {
+    lightbox_close();
+  }
+}
+
+function lightbox_open5() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo5");
+  window.scrollTo(0, 500);
+  document.getElementById('light5').style.display = 'block';
+  document.getElementById('fade5').style.display = 'block';
+  lightBoxVideo.play();
+}
+
+function lightbox_close5() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo5");
+  document.getElementById('light5').style.display = 'none';
+  document.getElementById('fade5').style.display = 'none';
+  lightBoxVideo.pause();
+}</script>
+
+
+
+
+
+<script type="text/javascript">window.document.onkeydown = function(e) {
+  if (!e) {
+    e = event;
+  }
+  if (e.keyCode == 27) {
+    lightbox_close();
+  }
+}
+
+function lightbox_open6() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo6");
+  window.scrollTo(0, 500);
+  document.getElementById('light6').style.display = 'block';
+  document.getElementById('fade6').style.display = 'block';
+  lightBoxVideo.play();
+}
+
+function lightbox_close6() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo6");
+  document.getElementById('light6').style.display = 'none';
+  document.getElementById('fade6').style.display = 'none';
+  lightBoxVideo.pause();
+}</script>
+
+
+
+
+
+
+<script type="text/javascript">window.document.onkeydown = function(e) {
+  if (!e) {
+    e = event;
+  }
+  if (e.keyCode == 27) {
+    lightbox_close();
+  }
+}
+
+function lightbox_open7() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo7");
+  window.scrollTo(0, 500);
+  document.getElementById('light7').style.display = 'block';
+  document.getElementById('fade7').style.display = 'block';
+  lightBoxVideo.play();
+}
+
+function lightbox_close7() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo7");
+  document.getElementById('light7').style.display = 'none';
+  document.getElementById('fade7').style.display = 'none';
+  lightBoxVideo.pause();
+}</script>
+
+</body>
+</html>
