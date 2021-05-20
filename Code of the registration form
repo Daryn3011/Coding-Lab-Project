@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><?php $Title ?></title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Roboto&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" type="text/css" href="logpgstyle.css">
+<style type="text/css" media="screen">
+     .isFalse{
+      margin-left:4vh;
+      border: 1px solid red;
+      border-radius: 5px;
+      width: 100%;
+      padding: 1.2vh;
+     
+    }
+    .falseBox{
+    width: 3vh;
+    height: 3vh;
+    border:1px  solid red;
+    }
+    .note{
+    	margin-left: 4vh;
+    	font-size: 0.8vw;
+    	color: red;
+    	padding: 0px; 
+    }
+
+</style>
+</head>
+<body>
+	<?php
+	    error_reporting(0);
+        $checkFname = 'inputStyle';
+        $checkEmail = 'inputStyle';
+        $checkPhone = 'inputStyle';
+        $checklog = 'inputStyle';
+        $checkPass = 'inputStyle';
+        $checkRePass = 'inputStyle';
+        $checkAgree = 'checkbox';
+        
+        $noteFname = '';
+        $noteEmail = '';
+        $notePhone = '';
+        $notePass = '';
+        $noteRepass = '';
+        $noteAgree = '';   
+        $notelog = ''; 
+
+        $wrongUser = '';
+        
+        
+        $fullname = $_POST['fullname'];
+        $registEmail = $_POST['RegistEmail'];
+        $phone = $_POST['phone'];
+        $registPass = $_POST['RegistPass'];
+        $repass = $_POST['Repass'];
+        $log = $_POST['login'];
+        $registerBtn = $_POST['registBtn'];
+        $agree = $_POST['agree'];
+
+        $loginEmail = $_POST['loginEmail'];
+        $loginpass = $_POST['Loginpass'];
+        $loginBtn = $_POST['singupBtn'];
+
+       
+
+        require 'connection.php';
+        $connection = new Connection;
+        if(isset($registerBtn)){
+        	
+        	if(strlen($fullname) < 4){
+              $checkFname = 'isFalse';
+              $noteFname = 'Пожалуйста, напишите ФИО!!!';
+        	}
+        	
+
+			
+			else if (!filter_var($registEmail, FILTER_VALIDATE_EMAIL)) {
+				$checkEmail = 'isFalse';
+				$noteEmail = 'Пожалуюста, напишите Еmail!!!';
+			}
+		
+
+			
+			else if (strlen($phone) != 11 || is_numeric($phone) == false) {
+				$checkPhone = 'isFalse';
+				$notePhone = 'Пожалуюста, напишите номер телефона!!!';
+				}
+
+			else if (strlen($log) < 4) {
+					$checklog = 'isFalse';
+					$notelog = 'Логин слишком короткий, повторите еще раз!!!';
+
+				}
+			elseif (strlen($log)>15) {
+					$checklog = 'isFalse';
+					$notelog = 'Логин слишком длинный, повторите еще раз!!!';
+	
+					}		
+				
+            
+            else if (strlen($registPass) < 6) {
+            	$checkPass = 'isFalse';
+            	$notePass  = 'Не подходящий пароль, пожалуйста напишите снова!!!';
+            }
+           
+
+            else if ($registPass != $repass) {
+            	$checkRePass = 'isFalse';
+            	$noteRepass = 'Ваш пароль не совпадает с предыдущим паролем!!!';
+            }
+          
+
+            else if (isset($agree) == false) {
+            	$checkAgree = 'falseBox';
+            	$noteAgree = 'Пожалуйста, примите условия!!!';
+            }
+           
+
+            else{
+            	$conn = $connection -> getConnect();
+                $sql = "INSERT INTO reg(fullname, registEmail, phone, log, registPass, repass, agree)
+                                values ('".$fullname."','".$registEmail."','".$phone."','".$log."','".$registPass."','".$repass."','".$agree."')";
+                $res = mysqli_query($conn,$sql);
+            }
+					
+
+        	}
+           
+        
+        elseif (isset($loginBtn)) {
+        	$conn = $connection -> getConnect();
+        	$searchUser = mysqli_query($conn,"SELECT registEmail FROM reg where registEmail ='".$loginEmail."'");
+        	$checkUser = mysqli_query($conn,"SELECT registPass FROM reg where registEmail ='".$loginEmail."'");
+        	$checkUserPass = mysqli_fetch_all($checkUser,MYSQLI_NUM);
+
+        	if(mysqli_num_rows($searchUser) > 0){
+                 if ($checkUserPass[0][0] == $loginpass) {
+                 	header("Location:https://www.youtube.com/");
+                 }
+                 else {
+                 	$wrongUser = 'Неверный логин/пароль, повторите пожалуйста!!!';
+                 }
+        	}
+        	else {
+        		$wrongUser = 'Неверный логин/пароль, повторите пожалуйста!!!';
+        	}
+        }
+
+       
+	?>
+
+<div class="container row p-0">
+	<div class="col-lg-12 col-md-12 col-sm-12 row p-0 m-0 head">
+		<div class="col-lg-6 col-md-6 col-sm-6 text-center sing s1" id="logSing">Войти</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 text-center sing s2" id="registSing">Регистрация</div>
+	
+
+	</div>
+		<div class="col-lg-12 col-md-12 col-sm-12 cntpad"><div class="line"></div></div>
+		<div class="col-lg-12 col-md-12 col-sm-12 cntpad"><hr></div>
+	<div class="col-lg-12 col-md-12 col-sm-12 cntpad">
+		<form action="" method="post" class="row form" id="registForm">
+			<div class="col-lg-4 col-md-4 col-sm-4 p-0 deviderspace fs"><label for="fname" class="w-100">ФИО</label></div>
+			<div class="col-lg-8 col-md-8 col-sm-8 p-0 deviderspace fs"><input type="text" name="fullname" id="fname" value="<?php echo $fullname; ?>" placeholder="Иван Сергейович Утков" class="<?php echo $checkFname ?>"></div>
+			<div class="col-lg-4 col-md-4 col-sm-4 p-0"></div>
+			<div class="col-lg-8 col-md-8 col-sm-8 p-0"><div class="note"><?php echo $noteFname ?></div></div>
+
+			<div class="col-lg-4 col-md-4 col-sm-4 p-0 deviderspace "><label for="email" class=" w-100">Email</label></div>
+			<div class="col-lg-8 col-md-8 col-sm-8 p-0 deviderspace"><input type="text" name="RegistEmail" id="email" placeholder="example@gmail.com" value="<?php echo $registEmail; ?>" class="<?php echo $checkEmail ?>"></div>
+			<div class="col-lg-4 col-md-4 col-sm-4 p-0"></div>
+			<div class="col-lg-8 col-md-8 col-sm-8 p-0"><div class="note"><?php echo $noteEmail ?></div></div>
+
+			<div class="col-lg-4 col-md-4 col-sm-4 p-0 deviderspace"><label for="phone" class=" w-100">Номер телефона</label></div>
+			<div class="col-lg-8 col-md-8 col-sm-8 p-0 deviderspace"><input type="text" name="phone" id="phone" placeholder="87000000000" value="<?php echo $phone; ?>" class="<?php echo $checkPhone ?>"></div>
+			<div class="col-lg-4 col-md-4 col-sm-4 p-0"></div>
+			<div class="col-lg-8 col-md-8 col-sm-8 p-0"><div class="note"><?php echo $notePhone ?></div></div>
+
+			<div class="col-lg-4 col-md-4 col-sm-4 p-0 deviderspace"><label for="type" class=" w-100">Логин</label></div>
+			<div class="col-lg-8 col-md-8 col-sm-8 p-0 deviderspace"><input type="text" name="login" id="type" placeholder="example007" value="<?php echo $log ?>" class="<?php echo $checklog ?>"></div>
+
+			<div class="col-lg-4 col-md-4 col-sm-4 p-0"></div>
+			<div class="col-lg-8 col-md-8 col-sm-8 p-0"><div class="note"><?php echo $notelog ?></div></div>
+
+
+			<div class="col-lg-4 col-md-4 col-sm-4 p-0 deviderspace"><label for="pass" class=" w-100">Пароль</label></div>
+			<div class="col-lg-8 col-md-8 col-sm-8 p-0 deviderspace"><input type="password" name="RegistPass" id="pass" placeholder="" value="<?php echo $registPass; ?>" class="<?php echo $checkPass ?>"></div>
+			<div class="col-lg-4 col-md-4 col-sm-4 p-0"></div>
+			<div class="col-lg-8 col-md-8 col-sm-8 p-0"><div class="note"><?php echo $notePass ?></div></div>
+
+
+
+			<div class="col-lg-4 col-md-4 col-sm-4 p-0 deviderspace"><label for="Repass" class=" w-100">Подтверждение пароля</label></div>
+			<div class="col-lg-8 col-md-8 col-sm-8 p-0 deviderspace"><input type="password" name="Repass" id="Repass" placeholder="" value="<?php echo $repass; ?>" class="<?php echo $checkRePass ?>"></div>
+			<div class="col-lg-4 col-md-4 col-sm-4 p-0"></div>
+			<div class="col-lg-8 col-md-8 col-sm-8 p-0"><div class="note"><?php echo $noteRepass ?></div></div>
+
+
+			<div class="col-lg-2 col-md-2 col-sm-2 p-0 agreeDevider text-right checkblock"><input type="checkbox" name="agree" id="agree" class="<?php echo $checkAgree ?>"></div>
+			<div class="col-lg-10 col-md-10 col-sm-10 p-0 deviderspace agreeblock"><label for="agree" class="w-100 agree" style="padding: 0px;">* Я соглашаюсь с правилами использования сервиса, 
+			а также с передачей и обработкой моих данных в Cinemax.</label></div>
+            
+      
+			<div class="col-lg-12 col-md-12 col-sm-12 p-0 text-center"><div class="note"><?php echo $noteAgree ?></div></div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 btnPlace text-center"><input type="submit" name="registBtn" value="Регистрация" class="btn text-white border-0 rounded"></div>
+		</form>
+
+	     <form action=""  method="post" class="row form" id="logForm" style="display: none;">
+	     	<div class="col-lg-4 col-md-4 col-sm-4 p-0 fs"><label for="email" class=" w-100">Email</label></div>
+			<div class="col-lg-8 col-md-8 col-sm-8 p-0 fs"><input type="text" name="loginEmail" id="email" placeholder="example@gmail.com" class="inputStyle"></div>
+
+			<div class="col-lg-4 col-md-4 col-sm-4 p-0 deviderspacelog"><label for="pass" class=" w-100">Пароль</label></div>
+			<div class="col-lg-8 col-md-8 col-sm-8 p-0 deviderspacelog"><input type="password" name="Loginpass" id="pass" placeholder="" class="inputStyle"></div>
+            <div class="col-lg-12 col-md-12 col-sm-12 p-0 text-center mt-3"><label for="pass" class=" w-100 text-center text-danger"><?php echo $wrongUser ?></label></div>
+			<div class="col-lg-12 col-md-12 col-sm-12 btnPlacelog text-center"><input type="submit" name="singupBtn" value="Войти" class="btn text-white border-0 rounded"></div>
+            <div class="forgotpass"><a href="#">Забыли пароль</a></div>
+	     </form>
+	</div>
+	
+</div>
+
+ 
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+       <script type="text/javascript">
+         var log = document.getElementById("logSing");
+         var regist = document.getElementById("registSing");
+         var logForm = document.getElementById("logForm");
+         var registForm = document.getElementById("registForm");
+         log.addEventListener("click",function() {
+
+         
+         	registForm.style.display = "none";
+         	
+         	
+         	anime({
+ 			 targets: '.container',
+			 translateY: '40%',
+			   easing: 'spring(1, 200, 13, 0)'
+			});
+         
+
+         	logForm.style.display = "";
+         	
+         	anime({
+ 			 targets: '.line',
+			 translateX: '-100%',
+			   easing: 'spring(1, 200, 13, 0)'
+			});
+         });
+          regist.addEventListener("click",function() {
+         	registForm.style.display = "";
+         	logForm.style.display = "none";
+         	anime({
+ 			 targets: '.line',
+			 translateX: '0%',
+			  easing: 'spring(1, 200, 13, 0)'
+			});
+				anime({
+ 			 targets: '.container',
+			 translateY: '0%',
+			   easing: 'spring(1, 200, 13, 0)'
+			});
+
+         });
+       </script>
+
+</body>
+</html>
